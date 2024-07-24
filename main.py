@@ -1,5 +1,3 @@
-import sys
-sys.path.append('./Functions')
 from Functions import main as f
 
 print("Olá, meu nome é Jarvis, como poderia tentar ajudá-lo hoje?")

@@ -1,4 +1,4 @@
-import options as op
+from Data import options as op
 
 # OPÇÕES
 def firstOptions():
