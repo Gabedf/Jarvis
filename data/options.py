@@ -1,6 +1,5 @@
 start = [
     'Hora',
-    'Clima',
     'Conversa',
     'Sair'
 ]
