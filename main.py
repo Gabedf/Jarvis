@@ -1,27 +1,31 @@
 from Functions import main as f
 from Data import options as op
 
-f.speak("Olá, meu nome é Jarvis, como poderia tentar ajudá-lo hoje?\n")
+print("Olá, meu nome é Jarvis, como poderia tentar ajudá-lo hoje?\n")
 f.firstOptions()
-user_input = f.understand()
+user_input = input("'Digite o que deseja: ")
 
-while user_input != 'sair':
-    if user_input == 'hora':
+while user_input.strip().lower() != 'sair':
+    if user_input.strip().lower() == 'hora':
         time =  f.get_current_time()
-        f.speak(f'Agora são {time} horas.')
-    elif user_input == 'conversa':
-        f.speak('Sobre o que você gostaria de conversar? ')
+        print(f'Agora são {time} horas.')
+    elif user_input.strip().lower() == 'clima':
+        print(f"O clima está {f.climate()} graus.")
+    elif user_input.strip().lower() == 'cotação':
+        f.price()
+    elif user_input.strip().lower() == 'conversa':
+        print('Sobre o que você gostaria de conversar? ')
         f.talkOptions()
-        user_input = f.understand()
-        if user_input == 'piada':
-            f.speak(f.jokesOptions())
-        elif user_input == 'curiosidade':
-            f.speak(f.curiositiesOptions())
+        user_input = input("'Digite o que deseja: ")
+        if user_input.strip().lower() == 'piada':
+            print(f.jokesOptions())
+        elif user_input.strip().lower() == 'curiosidade':
+            print(f.curiositiesOptions())
         else:
-            f.speak('Opção não encontrada.')
+            print('Opção não encontrada.')
     else:
-        f.speak('Opção não encontrada.')
+        print('Opção não encontrada.')
 
-    f.speak("\nCom o que mais eu poderia te ajudar?\n")
+    print("\nCom o que mais eu poderia te ajudar?\n")
     f.firstOptions()
-    user_input = f.understand()
+    user_input = input("'Digite o que deseja: ")

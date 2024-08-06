@@ -1,7 +1,9 @@
 start = [
     'Hora',
     'Conversa',
-    'Sair'
+    'Cotação',
+    'Clima',
+    'Sair',
 ]
 
 talk = [
